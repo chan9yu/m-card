@@ -1,0 +1,73 @@
+{
+	"name": "m-card",
+	"private": true,
+	"version": "0.1.0",
+	"description": "💳 m-card app repository",
+	"author": "chan9yu <wry5533@gmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/chan9yu/m-card"
+	},
+	"lint-staged": {
+		"**/*.{ts,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"scripts": {
+		"dev": "craco start",
+		"build": "craco build",
+		"test": "craco test",
+		"eject": "react-scripts eject",
+		"lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+		"lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
+		"commit": "pnpm git-cz",
+		"prepare": "husky install",
+		"husky:permission": "chmod +x .husky/*"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-scripts": "5.0.1"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^18.4.3",
+		"@commitlint/config-conventional": "^18.4.3",
+		"@craco/craco": "^7.1.0",
+		"@types/node": "^16.18.68",
+		"@types/react": "^18.2.42",
+		"@types/react-dom": "^18.2.17",
+		"@typescript-eslint/eslint-plugin": "^6.12.0",
+		"@typescript-eslint/parser": "^6.12.0",
+		"commitizen": "^4.3.0",
+		"eslint": "^8.0.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-config-react-app": "^7.0.1",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-jsx-a11y": "^6.8.0",
+		"eslint-plugin-prettier": "^5.0.1",
+		"eslint-plugin-react": "^7.33.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^15.1.0",
+		"prettier": "^3.1.0",
+		"typescript": "5.2.2"
+	}
+}
