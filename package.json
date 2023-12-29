@@ -43,15 +43,19 @@
 		"husky:permission": "chmod +x .husky/*"
 	},
 	"dependencies": {
+		"@emotion/react": "^11.11.3",
+		"@emotion/styled": "^11.11.0",
 		"firebase": "^10.7.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-scripts": "5.0.1"
 	},
 	"devDependencies": {
+		"@babel/preset-react": "^7.23.3",
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
 		"@craco/craco": "^7.1.0",
+		"@emotion/babel-plugin": "^11.11.0",
 		"@types/node": "^16.18.68",
 		"@types/react": "^18.2.42",
 		"@types/react-dom": "^18.2.17",
