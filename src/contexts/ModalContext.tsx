@@ -12,7 +12,7 @@ type ModalContextValue = {
 
 const ModalContext = createContext<ModalContextValue | undefined>(undefined);
 
-const defaultValue: ModalProps = {
+const initialModalState: ModalProps = {
 	description: null,
 	onButtonClick: () => {},
 	open: false,
@@ -20,10 +20,10 @@ const defaultValue: ModalProps = {
 };
 
 export default function ModalContextProvider({ children }: PropsWithChildren) {
-	const [modalState, setModalState] = useState(defaultValue);
+	const [modalState, setModalState] = useState(initialModalState);
 
 	const close = useCallback(() => {
-		setModalState(defaultValue);
+		setModalState(initialModalState);
 	}, []);
 
 	const open = useCallback(
