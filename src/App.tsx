@@ -1,36 +1,29 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
+
+import Button from './components/common/Button';
+import { useModalContext } from './contexts/ModalContext';
+import GlobalStyle from './styles/GlobalStyle';
 
 const containerStyles = css`
 	width: 100dvw;
 	height: 100dvh;
-	background-color: royalblue;
 	color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-`;
-
-const Button = styled.button`
-	width: 100px;
-	height: 40px;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-	background-color: crimson;
-	color: #fff;
-	border-radius: 4px;
-	border: 0;
 `;
 
 export default function App() {
+	const { open } = useModalContext();
+
 	return (
-		<div css={containerStyles}>
-			<span>App</span>
-			<Button>Button</Button>
-		</div>
+		<>
+			<GlobalStyle />
+			<div css={containerStyles}>
+				<Button onClick={() => open({ description: '내역페이지에서 확인해주세요.', title: '카드신청완료' })}>
+					open
+				</Button>
+			</div>
+		</>
 	);
 }
