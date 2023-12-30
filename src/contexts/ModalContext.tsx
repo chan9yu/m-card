@@ -1,7 +1,7 @@
 import { ComponentProps, PropsWithChildren, createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import Modal from '../components/common/Modal';
+import Modal from '../components/ui/Modal';
 
 type ModalProps = ComponentProps<typeof Modal>;
 type ModalOptions = Omit<ModalProps, 'open'>;

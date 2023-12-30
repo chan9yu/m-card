@@ -1,17 +1,18 @@
-import { CSSProperties, ComponentPropsWithRef, forwardRef } from 'react';
+import { CSSProperties, ComponentPropsWithRef, ElementType, forwardRef } from 'react';
 import * as S from './Flex.styles';
 
 type FlexProps = ComponentPropsWithRef<'div'> & {
+	as?: ElementType;
 	align?: CSSProperties['alignItems'];
 	direction?: CSSProperties['flexDirection'];
 	justify?: CSSProperties['justifyContent'];
 };
 
 const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
-	const { children, ...rest } = props;
+	const { as, children, ...rest } = props;
 
 	return (
-		<S.FlexStyled ref={ref} {...rest}>
+		<S.FlexStyled as={as} ref={ref} {...rest}>
 			{children}
 		</S.FlexStyled>
 	);

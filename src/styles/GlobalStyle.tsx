@@ -7,6 +7,12 @@ const defaultStyle = css`
 	${reset}
 	${root}
 
+		// a reset
+	a {
+		color: inherit;
+		text-decoration: inherit; /* no underline */
+	}
+
 	// button reset
 	button {
 		border: none;

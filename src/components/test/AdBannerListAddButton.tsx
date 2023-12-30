@@ -3,7 +3,7 @@ import { collection, doc, writeBatch } from 'firebase/firestore';
 import { store } from '../../firebase';
 import { COLLECTIONS } from '../../constants';
 import { adBanners } from '../../mock/data';
-import Button from '../common/Button';
+import Button from '../ui/Button';
 
 export default function AdBannerListAddButton() {
 	const handleButtonClick = async () => {
