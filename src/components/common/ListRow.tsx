@@ -1,10 +1,11 @@
 import { css } from '@emotion/react';
-import { ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 
 import Flex from '../ui/Flex';
 import Text from '../ui/Text';
 
 type ListRowProps = {
+	as?: ElementType;
 	contents?: ReactNode;
 	left?: ReactNode;
 	onClick?: () => void;
@@ -13,10 +14,10 @@ type ListRowProps = {
 };
 
 function ListRow(props: ListRowProps) {
-	const { contents, left, onClick, right, withArrow } = props;
+	const { as = 'li', contents, left, onClick, right, withArrow } = props;
 
 	return (
-		<Flex as="li" align="center" css={listRowContainerStyles} onClick={onClick}>
+		<Flex as={as} align="center" css={listRowContainerStyles} onClick={onClick}>
 			<Flex css={listRowLeftStyles}>{left}</Flex>
 			<Flex css={listRowContentsStyles}>{contents}</Flex>
 			<Flex>{right}</Flex>
@@ -26,6 +27,7 @@ function ListRow(props: ListRowProps) {
 }
 
 const listRowContainerStyles = css`
+	cursor: pointer;
 	padding: 8px 24px;
 `;
 
