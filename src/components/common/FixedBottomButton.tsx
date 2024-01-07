@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
+import { ComponentProps } from 'react';
 import { createPortal } from 'react-dom';
 
 import { colors } from '../../styles/variables';
@@ -8,10 +9,9 @@ import Button from '../ui/Button';
 
 type FixedBottomButtonProps = {
 	label: string;
-	onClick: () => void;
-};
+} & ComponentProps<typeof Button>;
 
-export default function FixedBottomButton({ label, onClick }: FixedBottomButtonProps) {
+export default function FixedBottomButton({ label, ...rest }: FixedBottomButtonProps) {
 	return createPortal(
 		<Container
 			initial={{
@@ -25,7 +25,7 @@ export default function FixedBottomButton({ label, onClick }: FixedBottomButtonP
 				translateY: 0
 			}}
 		>
-			<Button size="md" full css={buttonStyles} onClick={onClick}>
+			<Button {...rest} size="md" full css={buttonStyles}>
 				{label}
 			</Button>
 		</Container>,

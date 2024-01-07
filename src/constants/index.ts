@@ -1,5 +1,7 @@
 export enum ROUTER_PATH {
 	HOME = '/',
+	SIGNIN = '/signin',
+	SIGNUP = '/signup',
 	CARD = '/card',
 	TEST = '/test'
 }
