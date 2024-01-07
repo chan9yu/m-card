@@ -12,7 +12,7 @@ storybook-static
 *.min.css
 build
 dist
-.nx
+.turbo
 
 # misc
 .DS_Store
