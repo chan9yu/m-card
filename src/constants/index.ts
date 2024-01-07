@@ -8,5 +8,6 @@ export enum ROUTER_PATH {
 
 export enum COLLECTIONS {
 	ADBANNER = 'ADBANNER',
-	CARD = 'CARD'
+	CARD = 'CARD',
+	USER = 'USER'
 }

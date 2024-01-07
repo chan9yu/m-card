@@ -1,9 +1,3 @@
-import Form from '../components/sign/Form';
-
 export default function SigninPage() {
-	return (
-		<div>
-			<Form />
-		</div>
-	);
+	return <div>SigninPage</div>;
 }
